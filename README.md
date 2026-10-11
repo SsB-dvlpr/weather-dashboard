@@ -16,10 +16,7 @@
 
 ---
 
-## 📸 Ekran Görüntüsü
 
-> Buraya bir ekran görüntüsü ekle: görseli projeye `screenshot.png` adıyla koy ve şu satırı yaz:
-> `![Weather Dashboard](screenshot.png)`
 
 ## 🚀 Canlı Demo
 
