@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="flex min-h-screen items-center justify-center bg-slate-800 p-4">
+    <main class="w-full max-w-3xl rounded-3xl bg-slate-700 p-6 sm:p-10">
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <!-- Sol kart: sonuç -->
+        <section
+          class="flex min-h-64 flex-col justify-between rounded-2xl bg-linear-to-br from-cyan-300 via-sky-400 to-indigo-500 p-6 text-white shadow-xl sm:w-64"
+        >
+          <div>
+            <p class="text-sm opacity-80">Hava Durumu</p>
+            <h2 id="placeName" class="mt-1 text-xl font-semibold">--</h2>
+          </div>
+          <div>
+            <p id="tempValue" class="text-5xl font-bold">--</p>
+            <p id="windValue" class="mt-2 text-lg opacity-90">Rüzgar: --</p>
+          </div>
+        </section>
+
+        <!-- Sağ panel: arama + geçmiş -->
+        <section
+          class="flex-1 rounded-2xl bg-slate-900 p-6 text-slate-100 shadow-xl"
+        >
+          <div class="flex gap-2">
+            <input
+              type="text"
+              id="inputCity"
+              placeholder="Şehir Adını Giriniz"
+              class="min-w-0 flex-1 rounded-lg bg-slate-800 px-3 py-2 placeholder-slate-400 outline-none focus:ring-2 focus:ring-sky-400"
+            />
+            <button
+              type="button"
+              id="btnSearch"
+              class="rounded-lg bg-linear-to-r from-cyan-300 to-indigo-500 px-4 py-2 font-semibold text-slate-900 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              ARA
+            </button>
+          </div>
+
+          <span
+            id="inputSpan"
+            class="mt-2 block min-h-5 text-sm text-rose-300"
+          ></span>
+          <p id="weatherResult" class="min-h-6 text-sm text-slate-300"></p>
+
+          <div class="mt-4 flex items-center justify-between">
+            <h3 class="text-sm font-semibold uppercase tracking-wide">
+              Geçmiş
+            </h3>
+            <button
+              type="button"
+              id="btnClear"
+              class="text-sm text-slate-400 underline hover:text-slate-100"
+            >
+              Geçmişi Temizle
+            </button>
+          </div>
+          <ul id="history" class="mt-3 space-y-2"></ul>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
